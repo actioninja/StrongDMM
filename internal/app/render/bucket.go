@@ -87,7 +87,6 @@ func (r *Render) batchLevel(level int, viewBounds util.Bounds, withUnitHighlight
 						if point.X < 0 || point.Y < 0 || point.X > r.liveDmm.MaxX || point.Y > r.liveDmm.MaxY {
 							return false
 						}
-						log.Debug().Msg(fmt.Sprint(point, ";", r.liveDmm.MaxX, r.liveDmm.MaxY))
 						tilePrefabs := r.liveDmm.GetTile(point).Instances().Prefabs()
 						for _, prefab := range tilePrefabs {
 							if prefab.Path() == currentTurfPath {
