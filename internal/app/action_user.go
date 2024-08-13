@@ -321,6 +321,11 @@ func (a *app) DoAreaBorders() {
 	log.Print("do area borders:", pmap.AreaBordersRendering)
 }
 
+func (a *app) DoSimWallSmoothing() {
+	render.SimWallSmoothing = !render.SimWallSmoothing
+	log.Print("do sim wall smoothing:", render.SimWallSmoothing)
+}
+
 // DoMultiZRendering toggles multi-z rendering.
 func (a *app) DoMultiZRendering() {
 	render.MultiZRendering = !render.MultiZRendering

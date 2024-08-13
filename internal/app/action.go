@@ -226,6 +226,10 @@ func (a *app) MultiZRendering() bool {
 	return render.MultiZRendering
 }
 
+func (a *app) SimWallSmoothing() bool {
+	return render.SimWallSmoothing
+}
+
 // MirrorCanvasCamera returns true if maps sync their camera.
 func (a *app) MirrorCanvasCamera() bool {
 	return pmap.MirrorCanvasCamera

@@ -16,6 +16,7 @@ type Render struct {
 
 	overlay       overlay
 	unitProcessor unitProcessor
+	liveDmm       *dmmap.Dmm
 }
 
 func New() *Render {
@@ -36,6 +37,7 @@ func (r *Render) SetOverlay(state overlay) {
 
 func (r *Render) SetActiveLevel(dmm *dmmap.Dmm, activeLevel int) {
 	r.Camera.Level = activeLevel
+	r.liveDmm = dmm
 	if r.bucket.Level(activeLevel) == nil { // Ensure level exists
 		r.UpdateBucket(dmm, activeLevel)
 	}

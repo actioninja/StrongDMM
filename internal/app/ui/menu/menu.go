@@ -45,6 +45,7 @@ type app interface {
 	// View
 	DoAreaBorders()
 	DoMultiZRendering()
+	DoSimWallSmoothing()
 	DoMirrorCanvasCamera()
 
 	// Window
@@ -79,6 +80,7 @@ type app interface {
 
 	AreaBordersRendering() bool
 	MultiZRendering() bool
+	SimWallSmoothing() bool
 	MirrorCanvasCamera() bool
 }
 
@@ -228,6 +230,9 @@ func (m *Menu) Process() {
 			w.MenuItem("Area Borders", m.app.DoAreaBorders).
 				IconEmpty().
 				Selected(m.app.AreaBordersRendering()),
+			w.MenuItem("Simulate Wall Smoothing", m.app.DoSimWallSmoothing).
+				IconEmpty().
+				Selected(m.app.SimWallSmoothing()),
 			w.MenuItem("Multi-Z Rendering", m.app.DoMultiZRendering).
 				IconEmpty().
 				Selected(m.app.MultiZRendering()).
