@@ -3,7 +3,7 @@ package env
 const Undefined = "undefined"
 
 var (
-	Title    = "StrongDMM-TALLHACKV2"
+	Title    = "StrongDMM-TALLHACKV3"
 	Version  = Undefined
 	Revision = Undefined
 	GitHub   = "https://github.com/actioninja/StrongDMM/tree/tallhack"

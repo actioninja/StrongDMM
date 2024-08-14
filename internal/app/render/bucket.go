@@ -84,7 +84,7 @@ func (r *Render) batchLevel(level int, viewBounds util.Bounds, withUnitHighlight
 					currentTurfPath := u.Instance().Prefab().Path()
 					// Local function to check if adjacent points have closed turf prefab paths
 					isMatchingTurf := func(point util.Point) bool {
-						if point.X < 0 || point.Y < 0 || point.X > r.liveDmm.MaxX || point.Y > r.liveDmm.MaxY {
+						if point.X <= 0 || point.Y <= 0 || point.X > r.liveDmm.MaxX || point.Y > r.liveDmm.MaxY {
 							return false
 						}
 						tilePrefabs := r.liveDmm.GetTile(point).Instances().Prefabs()
